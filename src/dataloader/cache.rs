@@ -156,12 +156,12 @@ where
 
 /// LRU cache.
 pub struct LruCache {
-    cap: usize,
+    cap: NonZero<usize>,
 }
 
 impl LruCache {
     /// Creates a new LRU Cache that holds at most `cap` items.
-    pub fn new(cap: usize) -> Self {
+    pub fn new(cap: NonZero<usize>) -> Self {
         Self { cap }
     }
 }
